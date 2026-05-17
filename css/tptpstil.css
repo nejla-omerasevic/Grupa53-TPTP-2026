@@ -329,3 +329,11 @@ body.light-mode .glass-table td { color: #333333 !important; }
 .cijene-obracun p { font-size: 0.9rem; opacity: 0.8; margin-bottom: 5px; display: flex; justify-content: flex-end; gap: 15px; }
 .cijene-obracun h3 { font-size: 1.4rem; margin-top: 10px; font-weight: 800; }
 .pulse-button { background: var(--neon-green); color: #000000; border: none; font-weight: 800; padding: 12px 24px; border-radius: 10px; cursor: pointer; }
+
+.gallery-section { margin-top: 50px !important; }
+.sub-glow-title { font-size: 1.3rem !important; text-transform: uppercase; letter-spacing: 1.5px !important; margin-bottom: 25px !important; color: #ffffff !important; text-shadow: 0 0 10px rgba(255, 45, 117, 0.3) !important; }
+body.light-mode .sub-glow-title { color: #1a1a1a !important; }
+
+.gallery-grid { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important; gap: 20px !important; margin-top: 20px !important; }
+.gallery-grid img { width: 100% !important; height: 250px !important; object-fit: cover !important; border-radius: 15px !important; border: 1px solid var(--border-color) !important; display: block !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important; }
+.gallery-grid img:hover { transform: scale(1.03) !important; box-shadow: 0 8px 25px rgba(255, 45, 117, 0.25) !important; }
