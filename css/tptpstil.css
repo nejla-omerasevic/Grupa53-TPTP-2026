@@ -280,3 +280,52 @@ body.light-mode .hero-content p {
 .card-price-tag { color: var(--neon-green); font-weight: 800; font-size: 1rem; }
 .card-description { font-size: 0.85rem; opacity: 0.75; margin-bottom: 15px; height: 40px; overflow: hidden; }
 .card-action-link { display: inline-block; color: var(--neon-pink); text-decoration: none; font-size: 0.85rem; font-weight: 700; }
+
+.internal-page { max-width: 1000px; }
+.page-header-glow { text-align: center; margin-bottom: 40px; }
+.page-header-glow h1 { font-size: 2.5rem; font-weight: 800; }
+.table-showcase { margin-top: 30px !important; }
+.table-responsive-container { overflow-x: auto; width: 100%; }
+
+.glass-table { width: 100% !important; border-collapse: separate !important; border-spacing: 0 10px !important; }
+.glass-table th {
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: var(--text-main) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 1.5px !important;
+    padding: 18px 20px !important;
+    border-bottom: 2px solid var(--border-color) !important;
+    text-align: left;
+}
+.glass-table tbody tr { background: rgba(255, 255, 255, 0.02) !important; transition: all 0.25s ease !important; cursor: pointer; }
+.glass-table tbody tr:hover { background: rgba(255, 255, 255, 0.07) !important; transform: scale(1.006); }
+.glass-table td { padding: 18px 20px !important; font-size: 0.9rem !important; color: rgba(255, 255, 255, 0.85) !important; border-top: 1px solid var(--border-color) !important; border-bottom: 1px solid var(--border-color) !important; }
+.glass-table td:first-child { border-left: 1px solid var(--border-color) !important; border-top-left-radius: 12px !important; border-bottom-left-radius: 12px !important; }
+.glass-table td:last-child { border-right: 1px solid var(--border-color) !important; border-top-right-radius: 12px !important; border-bottom-right-radius: 12px !important; color: var(--neon-green); font-weight: 700; }
+
+body.light-mode .glass-table th { background: rgba(0, 0, 0, 0.03) !important; color: #1a1a1a !important; }
+body.light-mode .glass-table tbody tr { background: #ffffff !important; }
+body.light-mode .glass-table td { color: #333333 !important; }
+
+.cijene-staklo-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.promo-input-group { display: flex; gap: 10px; max-width: 400px; width: 100%; }
+.promo-input-group input { background: rgba(0, 0, 0, 0.3); border: 1px solid var(--border-color); color: var(--text-main); padding: 12px 16px; border-radius: 10px; font-size: 0.85rem; flex: 1; }
+.promo-input-group button { background: transparent; border: 1px solid var(--neon-pink); color: var(--neon-pink); padding: 12px 20px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+.promo-input-group button:hover { background: var(--neon-pink); color: #fff; }
+.cijene-obracun { text-align: right; }
+.cijene-obracun p { font-size: 0.9rem; opacity: 0.8; margin-bottom: 5px; display: flex; justify-content: flex-end; gap: 15px; }
+.cijene-obracun h3 { font-size: 1.4rem; margin-top: 10px; font-weight: 800; }
+.pulse-button { background: var(--neon-green); color: #000000; border: none; font-weight: 800; padding: 12px 24px; border-radius: 10px; cursor: pointer; }
