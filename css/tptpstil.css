@@ -124,3 +124,63 @@ body.light-mode .navbar-glow {
     background: rgba(57, 255, 20, 0.1) !important;
     box-shadow: 0 0 15px rgba(57, 255, 20, 0.2) !important;
 }
+
+.main-split-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+@media (max-width: 900px) {
+    .main-split-layout { grid-template-columns: 1fr; }
+}
+
+.glass-sidebar {
+    background: linear-gradient(135deg, rgba(255, 45, 117, 0.1), rgba(160, 32, 240, 0.05)) !important;
+    border: 1px solid rgba(255, 45, 117, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 35px 25px !important;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(255, 45, 117, 0.12) !important;
+    backdrop-filter: blur(10px);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-sidebar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(255, 45, 117, 0.22) !important;
+}
+
+.promo-badge {
+    background: var(--neon-pink) !important;
+    color: #ffffff !important;
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+    padding: 6px 14px !important;
+    border-radius: 50px !important;
+    display: inline-block !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 0 15px rgba(255, 45, 117, 0.5) !important;
+}
+.promo-title { font-size: 1.8rem !important; font-weight: 800 !important; color: #ffffff !important; margin-bottom: 12px !important; }
+.promo-desc { font-size: 0.9rem !important; line-height: 1.6 !important; opacity: 0.85 !important; color: #e0e0e0 !important; margin-bottom: 25px !important; }
+.promo-code {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px dashed var(--neon-green) !important;
+    color: var(--neon-green) !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+}
+
+body.light-mode .glass-sidebar { background: rgba(255, 255, 255, 0.8) !important; border: 1px solid rgba(255, 45, 117, 0.25) !important; }
+body.light-mode .promo-title { color: #1a1a1a !important; }
+body.light-mode .promo-desc { color: #4a4a4a !important; }
+body.light-mode .promo-code { background: #ffffff !important; }
