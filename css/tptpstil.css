@@ -384,3 +384,201 @@ body.light-mode .input-container input, body.light-mode .input-container select,
 .copyright { opacity: 0.6; margin-bottom: 15px; }
 .footer-socials a { color: var(--text-main); text-decoration: none; margin: 0 10px; font-weight: 700; }
 .footer-socials a:hover { color: var(--neon-pink); }
+
+@keyframes neonPulsiranje {
+    0% {
+        box-shadow: 0 0 5px var(--neon-pink);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--neon-pink), 0 0 30px var(--neon-pink);
+        transform: scale(1.03);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--neon-pink);
+        transform: scale(1);
+    }
+}
+
+/* Primjena animacije na dugmad za slanje i plaćanje */
+.pulse-button, .send-btn {
+    animation: neonPulsiranje 2.5s infinite ease-in-out;}
+
+/* Bookmark linkovi na vrhu */
+.bookmark-container {
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.link-pink {
+    color: var(--neon-pink) !important;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.link-pink:hover {
+    text-decoration: underline;
+}
+
+/* Dugme za plaćanje u kalkulatoru */
+.katalog-pay-btn {
+    margin-top: 15px;
+    max-width: 250px;
+    float: right;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+}
+
+.clear-float {
+    clear: both;
+}
+
+/* Galerija i sekcije */
+.gallery-padding {
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.gallery-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-layout img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.gallery-layout img:hover {
+    transform: scale(1.02);
+}
+
+/* Interaktivna anatomija */
+.anatomija-layout {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+}
+
+.section-subtitle {
+    margin-bottom: 20px;
+    color: var(--text-main);
+    opacity: 0.8;
+}
+
+.interactive-map-img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 15px;
+    border: 1px solid var(--neon-pink);
+}
+
+/* Klasifikacija asortimana */
+.struktura-layout {
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.glavna-lista {
+    padding-left: 20px;
+    line-height: 2;
+    margin-top: 15px;
+}
+
+.podlista {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.lista-pink {
+    color: var(--neon-pink);
+}
+
+.lista-green {
+    color: var(--neon-green);
+}
+
+/* Skok na vrh stranice */
+.scroll-top-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.top-link {
+    color: var(--neon-green);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.top-link:hover {
+    text-decoration: underline;
+}
+
+/* Bočni meni (Sidebar) */
+.sticky-sidebar-wrapper {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-self: start;
+}
+
+.filter-title {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--neon-pink);
+}
+
+.block-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.block-btn-last {
+    display: block;
+    width: 100%;
+}
+
+/* Banner sekcija */
+.banner-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+.block-picture {
+    display: block;
+    width: 100%;
+}
+
+.hero-banner-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+/* Google Mapa */
+.google-map-iframe {
+    border: 0;
+    min-height: 250px;
+}
+
+.full-width-container {
+    width: 100% !important;
+}
