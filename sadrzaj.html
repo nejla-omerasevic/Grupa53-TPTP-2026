@@ -3,33 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadržaj | NSN Garden</title>
+    <title>Katalog | NSN Garden</title>
     <link rel="stylesheet" href="css/tptpstil.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="images/icon.jfif">
+    <link rel="manifest" href="manifest.json">
 </head>
-<body class="dark-mode">
+<body class="dark-mode" id="vrt-vrh">
 
+    <div class="theme-btn" id="theme-toggle" role="button">
+        <span class="theme-icon">🌙</span> <span class="theme-text">DARK MODE</span>
+    </div>
 
-    <header class="navbar-glow">
-        <div class="nav-container">
-            <div class="logo">NSN <span class="neon-text">GARDEN</span></div>
-            <nav class="nav-links">
-                <a href="index.html">Početna</a>
-                <a href="sadrzaj.html" class="active">Katalog</a>
-                <a href="kontakt.html">Kontakt</a>
-                 <a href="https://github.com/" target="_blank" class="gh-link">GitHub ↗</a>
-            </nav>
+<header class="navbar-glow">
+    <div class="nav-container">
+        <div class="logo">NSN <span class="neon-text">GARDEN</span></div>
+        <nav class="nav-links">
+            <a href="index.html">Početna</a>
+            <a href="sadrzaj.html" class="active">Katalog</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="https://github.com/" target="_blank" class="gh-link">GitHub ↗</a>
+        </nav>
+    </div>
+</header>
+
+    <main class="wrapper internal-page">
+        
+        <div class="bookmark-links" style="margin-bottom: 20px; font-size: 0.85rem; opacity: 0.8;">
+            Skok na: <a href="#tabela-sekcija" class="smooth-scroll" style="color: var(--neon-pink); margin-right: 15px;">📊 Kalkulator cijena</a>
+            <a href="#galerija-sekcija" class="smooth-scroll" style="color: var(--neon-pink); margin-right: 15px;">🖼️ Galerija</a>
+            <a href="#anatomija-sekcija" class="smooth-scroll" style="color: var(--neon-pink); margin-right: 15px;">🗺️ Interaktivna slika</a>
+            <a href="#struktura-sekcija" class="smooth-scroll" style="color: var(--neon-pink);">🌿 Botaničke kategorije</a>
         </div>
-    </header>
-    
-   <footer class="glass-footer">
+
+        <section class="page-header-glow">
+            <h1>Ekskluzivni <span class="gradient-text">Katalog</span></h1>
+            <p>Pregledajte naš asortiman, izaberite željene aranžmane klikom na redove i izračunajte ukupnu cijenu.</p>
+        </section>
+
+        <section class="table-showcase" id="tabela-sekcija">
+            <div class="table-responsive-container">
+                <table class="glass-table">
+                    <thead>
+                        <tr>
+                            <th>Aranžman</th>
+                            <th>Karakteristike</th>
+                            <th>Rok isporuke</th>
+                            <th>Cijena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Buket 'NSN'</td>
+                            <td>Sezonsko cvijeće, premium dizajn</td>
+                            <td>Maksimalno 2.5h</td>
+                            <td>45 KM</td>
+                        </tr>
+                        <tr>
+                            <td>Royal Ruže</td>
+                            <td>Ekskluzivne crvene ruže u staklenoj vazi</td>
+                            <td>Maksimalno 2h</td>
+                            <td>120 KM</td>
+                        </tr>
+                        <tr>
+                            <td>Minimalist Monstera</td>
+                            <td>Luksuzno kućno saksijsko bilje</td>
+                            <td>Isporuka odmah</td>
+                            <td>35 KM</td>
+                        </tr>
+                        <tr>
+                            <td>Spring Box</td>
+                            <td>Holandski tulipani u dekorativnoj kutiji</td>
+                            <td>Maksimalno 2.5h</td>
+                            <td>60 KM</td>
+                        </tr>
+                        <tr>
+                            <td>Emerald Ficus</td>
+                            <td>Dugotrajni fikus sjajnih listova</td>
+                            <td>Isporuka odmah</td>
+                            <td>40 KM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="kalkulator-sekcija">
+            <div class="cijene-staklo-box">
+                <div class="promo-input-group">
+                    <input type="text" id="promo-kod-unos" placeholder="Unesite promo kod (npr. NSNGARDEN15)">
+                    <button id="primijeni-popust-btn">Primijeni popust</button>
+                </div>
+                <div class="cijene-obracun">
+                    <p>Osnovna cijena: <span id="osnovna-cijena">0 KM</span></p>
+                    <p id="popust-red" style="display: none; color: var(--neon-pink);">Popust (15%): <span id="popust-iznos">-0 KM</span></p>
+                    <h3>UKUPNA VRIJEDNOST: <span id="ukupna-cijena-ispis" class="neon-text">0 KM</span></h3>
+                    <button id="proslijedi-narudzbu" class="pulse-button" style="margin-top: 15px; max-width: 250px; float: right; padding: 12px 20px; font-size: 0.85rem;">NASTAVI NA PLAĆANJE ↗</button>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galerija-sekcija" style="margin-top: 50px; background: var(--bg-card); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color);">
+            <h2 class="sub-glow-title">// Naša Galerija</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+                <img src="images/cvijet1.jpg" alt="Raskošan cvjetni aranžman s tamnocrvenim i breskvastim cvjetovima, plavim čičcima i zelenim listovima u sivoj vazi " style="width: 100%; border-radius: 10px; border: 1px solid var(--border-color);">
+                <img src="images/cvijet2.jpg" alt="Bogat buket s jarkoljubičastim i tamnocrvenim ružama u klasičnoj glinenoj saksiji na drvenom postolju" style="width: 100%; border-radius: 10px; border: 1px solid var(--border-color);">
+                <img src="images/cvijet3.jpg" alt="Zelena sobna biljka Monstera u maslinastozelenoj saksiji postavljenoj na maloj drvenoj stolici" style="width: 100%; border-radius: 10px; border: 1px solid var(--border-color);">
+                <img src="images/cvijet4.jpg" alt="Cvjetni aranžman s ružičastim tulipanima i bijelim i plavim zumbulima u pravokutnoj staklenoj posudi na drvenoj polici" style="width: 100%; border-radius: 10px; border: 1px solid var(--border-color);">
+                <img src="images/cvijet5.jpg" alt="Gusta sobna biljka Fikus gumijevac sa sjajnim tamnozelenim listovima u sivoj saksiji na drvenoj površini" style="width: 100%; border-radius: 10px; border: 1px solid var(--border-color);">
+                <img src="images/cvijet6.jpg" alt="Cvjetajuća žuta orhideja u tradicionalnoj glinenoj saksiji na malom drvenom postolju" style="width: 100%; border-radius: 10px; border: 1px solid var(--border-color);">
+            </div>
+        </section>
+
+        <section id="anatomija-sekcija" style="margin-top: 50px; background: var(--bg-card); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color); text-align: center;">
+            <h2 class="sub-glow-title">// Interaktivna anatomija buketa</h2>
+            <p style="margin-bottom: 20px; color: var(--text-main); opacity: 0.8;">Kliknite na dijelove slike (gornji ili donji dio) za više detalja.</p>
+            
+            <img src="images/cvijet2.jpg" alt="Anatomija buketa" usemap="#buketmapa" style="max-width: 100%; max-height: 400px; border-radius: 15px; border: 1px solid var(--neon-pink);">
+            
+            <map name="buketmapa">
+                <area shape="circle" coords="200,150,80" href="#vrt-vrh" alt="Glavni cvjetovi" title="Premium uvozne ruže">
+                <area shape="rect" coords="120,300,280,450" href="#vrt-vrh" alt="Ukrasna kutija" title="Luksuzno baršunasto pakovanje">
+            </map>
+        </section>
+
+        <section id="struktura-sekcija" style="margin-top: 50px; background: var(--bg-card); padding: 30px; border: 1px solid var(--border-color); border-radius: 15px;">
+            <h2 class="sub-glow-title">// Klasifikacija Asortimana</h2>
+            <ul style="padding-left: 20px; line-height: 2; margin-top: 15px;">
+                <li><strong>Rezano cvijeće i Pokloni</strong>
+                    <ul style="padding-left: 20px; list-style-type: square; color: var(--neon-pink);">
+                        <li>Premium Buketi (Miješani aranžmani)</li>
+                        <li>Ruže u kutijama (Luksuzno pakovanje)</li>
+                    </ul>
+                </li>
+                <li><strong>Saksijske biljke</strong>
+                    <ul style="padding-left: 20px; list-style-type: square; color: var(--neon-green);">
+                        <li>Tropsko zelenilo (Monstera, Fikusi)</li>
+                        <li>Sukulenti i dekorativne mini saksije</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="#vrt-vrh" class="smooth-scroll" style="color: var(--neon-green); text-decoration: none; font-size: 0.9rem; font-weight: bold;">▲ Skoči na vrh stranice</a>
+        </div>
+
+    </main>
+
+    <footer class="glass-footer">
         <p class="authors">Nejla E. Omerašević • Samra Lupić • Nejla N. Omerašević</p>
         <p class="copyright">© 2026 NSN Studio Tuzla. Sva prava zadržana.</p>
         <div class="footer-socials">
-            <a href="https://instagram.com/tvoj_profil" target="_blank" class="social-link">📸 INSTAGRAM</a>
-            <a href="https://facebook.com/tvoj_profil" target="_blank" class="social-link">👥 FACEBOOK</a>
+            <a href="https://instagram.com/" target="_blank">📸 INSTAGRAM</a>
+            <a href="https://facebook.com/" target="_blank">📘 FACEBOOK</a>
         </div>
     </footer>
-    </body>
+    <script src="js/tptpskripte.js"></script>
+</body>
 </html>
