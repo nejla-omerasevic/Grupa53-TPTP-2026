@@ -619,3 +619,21 @@ body.light-mode .input-container input, body.light-mode .input-container select,
 .full-width-container {
     width: 100% !important;
 }
+/* ==========================================================================
+   POPRAVAK SIDEBAR-A ZA MOBILNE UREĐAJE (RESPONZIVNOST)
+   ========================================================================== */
+@media (max-width: 900px) {
+    /* Isključujemo sticky ponašanje na mobitelu da ne leti preko ekrana */
+    .sticky-sidebar-wrapper, .glass-sidebar {
+        position: static !important; 
+        width: 100% !important;
+    }
+
+    /* Posloži filtere i popust jedan ispod drugog sa razmakom */
+    .sticky-sidebar-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 20px !important;
+    }
+}
