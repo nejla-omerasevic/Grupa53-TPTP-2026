@@ -1,0 +1,16 @@
+{
+  "short_name": "NSNGarden",
+  "name": "NSN Garden Premium Flora",
+  "icons": [
+    {
+      "src": "./images/icon.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#0b0c10",
+  "theme_color": "#ff2d75",
+  "display": "standalone",
+  "orientation": "portrait"
+}
