@@ -1,0 +1,63 @@
+:root {
+    --bg-main: #0f111a; 
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --border-color: rgba(255, 255, 255, 0.12);
+    --text-main: #ffffff;
+    --neon-pink: #ff2d75;
+    --neon-green: #39ff14;
+    --gradient: linear-gradient(135deg, #ff2d75, #a020f0);
+}
+
+body.light-mode {
+    --bg-main: #ebf0f5;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --text-main: #1a1a1a;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Prekidač za temu - fiksiran u donjem desnom ćošku i prati skrolovanje */
+.theme-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+}
+.theme-btn:hover {
+    transform: scale(1.05);
+    border-color: var(--neon-pink);
+}
