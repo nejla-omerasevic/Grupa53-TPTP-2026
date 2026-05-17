@@ -620,16 +620,24 @@ body.light-mode .input-container input, body.light-mode .input-container select,
     width: 100% !important;
 }
 /* ==========================================================================
-   POPRAVAK SIDEBAR-A ZA MOBILNE UREĐAJE (RESPONZIVNOST)
+   KONAČNI POPRAVAK ZA MOBILNE UREĐAJE I MANJE EKRANE (RESPONZIVNOST)
    ========================================================================== */
 @media (max-width: 900px) {
-    /* Isključujemo sticky ponašanje na mobitelu da ne leti preko ekrana */
+    /* Isključujemo dvo-kolonski grid i prebacujemo u jednu kolonu */
+    .main-split-layout {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* Isključujemo sticky ponašanje na mobitelu da filteri ne lete preko sadržaja */
     .sticky-sidebar-wrapper, .glass-sidebar {
         position: static !important; 
         width: 100% !important;
     }
 
-    /* Posloži filtere i popust jedan ispod drugog sa razmakom */
+    /* Posloži filtere i popust uredno jedan ispod drugog na vrhu stranice */
     .sticky-sidebar-wrapper {
         display: flex !important;
         flex-direction: column !important;
