@@ -337,3 +337,37 @@ body.light-mode .sub-glow-title { color: #1a1a1a !important; }
 .gallery-grid { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important; gap: 20px !important; margin-top: 20px !important; }
 .gallery-grid img { width: 100% !important; height: 250px !important; object-fit: cover !important; border-radius: 15px !important; border: 1px solid var(--border-color) !important; display: block !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important; }
 .gallery-grid img:hover { transform: scale(1.03) !important; box-shadow: 0 8px 25px rgba(255, 45, 117, 0.25) !important; }
+
+.form-glass-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+.form-row-split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 550px) { .form-row-split { grid-template-columns: 1fr; } }
+
+.input-container { margin-bottom: 20px; }
+.input-container label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.input-container input, .input-container select, .input-container textarea {
+    width: 100%;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 14px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+body.light-mode .input-container input, body.light-mode .input-container select, body.light-mode .input-container textarea { background: #ffffff; color: #1a1a1a; }
+.input-container input:focus, .input-container select:focus, .input-container textarea:focus { outline: none; border-color: var(--neon-pink); box-shadow: 0 0 10px rgba(255, 45, 117, 0.2); }
+
+.error-text { color: var(--neon-pink); font-size: 0.75rem; font-weight: 600; margin-top: 5px; display: block; height: 15px; }
+.input-error-field { border: 1px solid var(--neon-pink) !important; }
+
+.button-group-form { display: flex; gap: 15px; margin-top: 10px; }
+.send-btn { background: var(--gradient); color: #fff; border: none; padding: 14px 28px; border-radius: 12px; font-weight: 700; cursor: pointer; flex: 2; transition: all 0.2s ease; text-transform: uppercase; }
+.send-btn:hover { box-shadow: 0 0 20px rgba(255, 45, 117, 0.4); }
+.clear-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-main); padding: 14px 20px; border-radius: 12px; cursor: pointer; flex: 1; transition: all 0.2s ease; }
