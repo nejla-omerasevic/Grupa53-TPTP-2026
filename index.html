@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Početna | NSN Garden</title>
+    <link rel="stylesheet" href="css/tptpstil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/icon.jfif">
+    <link rel="manifest" href="manifest.json">
 </head>
-<body>
-    
+<body class="dark-mode">
+
+    <div class="theme-btn" id="theme-toggle" role="button">
+        <span class="theme-icon">🌙</span> <span class="theme-text">DARK MODE</span>
+    </div>
+
+    <header class="navbar-glow">
+        <div class="nav-container">
+            <div class="logo">NSN <span class="neon-text">GARDEN</span></div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Početna</a>
+                <a href="sadrzaj.html">Katalog</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="https://github.com/" target="_blank" class="gh-link">GitHub ↗</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper main-split-layout">
+        
+        <div style="position: sticky; top: 100px; display: flex; flex-direction: column; gap: 25px; align-self: start;">
+            
+            <nav class="glass-sidebar filter-group">
+                <h3 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--neon-pink);">// Filtriraj ponudu</h3>
+                <button class="f-btn active" id="f-all" style="display:block; width:100%; margin-bottom:10px;">Sve kolekcije</button>
+                <button class="f-btn" id="f-buketi" style="display:block; width:100%; margin-bottom:10px;">Kraljevski Buketi</button>
+                <button class="f-btn" id="f-ruze" style="display:block; width:100%; margin-bottom:10px;">Luksuzne Ruže</button>
+                <button class="f-btn" id="f-saksijsko" style="display:block; width:100%; margin-bottom:10px;">Saksijsko Bilje</button>
+                <button class="f-btn" id="f-ekskluzivno" style="display:block; width:100%;">Ekskluzivni Setovi</button>
+            </nav>
+
+            <aside class="glass-sidebar">
+                <span class="promo-badge">VIKEND AKCIJA</span>
+                <h2 class="promo-title">15% POPUSTA</h2>
+                <p class="promo-desc">Unesite kod prilikom pregleda kataloga i ostvarite popust na sve luksuzne botaničke aranžmane.</p>
+                <span class="promo-code">NSNGARDEN15</span>
+            </aside>
+            
+        </div>
+
+        <section>
+            <div class="hero-animated">
+                <div class="hero-content">
+                    <h1>Dizajniramo <br><span class="gradient-text">Cvjetne Emocije</span></h1>
+                    <p>NSN Studio Tuzla stvara unikatne botaničke koncepte, kombinujući luksuznu estetiku i svježinu prirode.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; margin-bottom: 40px; border-radius: 15px; overflow: hidden; border: 1px solid var(--border-color); width: 100%; display: block; clear: both; position: relative;">
+                <picture style="display: block; width: 100%;">
+                    <source srcset="images/banner.webp" type="image/webp">
+                    <img src="images/banner.jpg" alt="NSN Garden promotivni banner" style="width: 100%; max-height: 250px; object-fit: cover; display: block; margin: 0;">
+                </picture>
+            </div>
+
+            <div class="stats-glow-grid">
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Unikatnih kreacija</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Svježe bilje</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Dostava Tuzla</div>
+                </div>
+            </div>
+
+            <div class="section-top">
+                <h2>Izdvojena ponuda</h2>
+            </div>
+
+            <div id="cards-grid" class="animated-grid"></div>
+
+            <aside class="media-card">
+                <div class="media-grid">
+                    <div class="media-text">
+                        <h3>Posjetite naš kreativni studio</h3>
+                        <p>Nalazimo se u samom centru Tuzle. Svaki aranžman možete lično izabrati ili kreirati u saradnji sa našim timom.</p>
+                        <span class="badge-status">● Otvoreno smo</span>
+                    </div>
+                    <div class="media-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2871.3732442426985!2d18.6735626!3d44.5401217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759a3962ed14d13%3A0xe9791444d32f5f14!2sTuzla!5e0!3m2!1sbs!2sba!4v1716000000000!5m2!1sbs!2sba" width="100%" height="100%" style="border:0; min-height: 250px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </aside>
+            
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p class="authors">Nejla E. Omerašević • Samra Lupić • Nejla N. Omerašević</p>
+        <p class="copyright">© 2026 NSN Studio Tuzla. Sva prava zadržana.</p>
+        <div class="footer-socials">
+            <a href="https://instagram.com/" target="_blank">📸 INSTAGRAM</a>
+            <a href="https://facebook.com/" target="_blank">📘 FACEBOOK</a>
+        </div>
+    </footer>
+    <script src="js/tptpskripte.js"></script>
 </body>
 </html>

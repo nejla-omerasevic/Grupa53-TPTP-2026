@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | NSN Garden</title>
+    <link rel="stylesheet" href="css/tptpstil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/icon.jfif"> 
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="dark-mode">
+
+    <div class="theme-btn" id="theme-toggle" role="button">
+        <span class="theme-icon">🌙</span> <span class="theme-text">DARK MODE</span>
+    </div>
+
+    <header class="navbar-glow">
+        <div class="nav-container">
+            <div class="logo">NSN <span class="neon-text">GARDEN</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Početna</a>
+                <a href="sadrzaj.html">Katalog</a>
+                <a href="kontakt.html" class="active">Kontakt</a>
+                <a href="https://github.com/" target="_blank" class="gh-link">GitHub ↗</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper internal-page">
+        <div class="page-header-glow">
+            <h1>Kontaktirajte Nas</h1>
+            <p>Imate posebne botaničke želje, planirate vjenčanje ili poslovni događaj? Naš kreativni tim je tu za vas.</p>
+        </div>
+
+        <div class="form-glass-container">
+            <form id="kontakt-forma" novalidate>
+                
+                <div class="form-row-split">
+                    <div class="input-container">
+                        <label for="ime">Vaše Ime</label>
+                        <input type="text" id="ime" placeholder="Npr. Nejla">
+                        <span class="error-text" id="err-ime"></span>
+                    </div>
+                    <div class="input-container">
+                        <label for="prezime">Vaše Prezime</label>
+                        <input type="text" id="prezime" placeholder="Npr. Omerašević">
+                        <span class="error-text" id="err-prezime"></span>
+                    </div>
+                </div>
+
+                <div class="form-row-split">
+                    <div class="input-container">
+                        <label for="email">E-mail Adresa</label>
+                        <input type="email" id="email" placeholder="ime@primjer.ba">
+                        <span class="error-text" id="err-email"></span>
+                    </div>
+                    <div class="input-container">
+                        <label for="telefon">Broj Telefona</label>
+                        <input type="tel" id="telefon" placeholder="061 123 456">
+                        <span class="error-text" id="err-telefon"></span>
+                    </div>
+                </div>
+
+                <div class="form-row-split">
+                    <div class="input-container" style="width: 100%;">
+                        <label for="tema">Tema Upita</label>
+                        <select id="tema">
+                            <option value="">-- Odaberite temu --</option>
+                            <option value="Narudžba">Privatna narudžba</option>
+                            <option value="Vjenčanje">Dekoracija vjenčanja</option>
+                            <option value="Saradnja">Poslovna saradnja</option>
+                        </select>
+                        <span class="error-text" id="err-tema"></span>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <label for="poruka">Vaša poruka</label>
+                    <textarea id="poruka" rows="5" placeholder="Napišite vaše želje detaljno..."></textarea>
+                    <span class="error-text" id="err-poruka"></span>
+                </div>
+
+                <div class="button-group-form">
+                    <button type="submit" class="send-btn">POŠALJI PORUKU ↗</button>
+                    <button type="reset" id="reset-btn" class="clear-btn">OČISTI</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <p class="authors">Nejla E. Omerašević • Samra Lupić • Nejla N. Omerašević</p>
+        <p class="copyright">© 2026 NSN Studio Tuzla. Sva prava zadržana.</p>
+        <div class="footer-socials">
+            <a href="https://instagram.com/" target="_blank">📸 INSTAGRAM</a>
+            <a href="https://facebook.com/" target="_blank">📘 FACEBOOK</a>
+        </div>
+    </footer>
+    <script src="js/tptpskripte.js"></script>
+</body>
+</html>
