@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. DEFINICIJA BOJA, GLOBALNI STILOVI I BAZA
+   ========================================================================== */
 :root {
     --bg-main: #0f111a; 
     --bg-card: rgba(255, 255, 255, 0.04);
@@ -62,7 +65,9 @@ body {
     border-color: var(--neon-pink);
 }
 
-
+/* ==========================================================================
+   2. NAVIGACIJA I ZAGLAVLJE
+   ========================================================================== */
 .navbar-glow {
     background: rgba(15, 17, 26, 0.75);
     border-bottom: 1px solid var(--border-color);
@@ -125,6 +130,9 @@ body.light-mode .navbar-glow {
     box-shadow: 0 0 15px rgba(57, 255, 20, 0.2) !important;
 }
 
+/* ==========================================================================
+   3. STRUKTURA I SIDEBAR (INDEX STRANICA)
+   ========================================================================== */
 .main-split-layout {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -185,6 +193,9 @@ body.light-mode .promo-title { color: #1a1a1a !important; }
 body.light-mode .promo-desc { color: #4a4a4a !important; }
 body.light-mode .promo-code { background: #ffffff !important; }
 
+/* ==========================================================================
+   4. HERO - SAVRŠEN BANER (TEKST PREKO SLIKE)
+   ========================================================================== */
 .hero-animated {
     background: linear-gradient(rgba(15, 17, 26, 0.72), rgba(15, 17, 26, 0.72)), 
                 url('images/hero-banner.jpg') no-repeat center center/cover;
@@ -235,8 +246,11 @@ body.light-mode .hero-content p {
 .stats-glow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
 .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 20px; border-radius: 15px; text-align: center; }
 .stat-number { font-size: 2rem; color: var(--neon-pink); font-weight: 800; }
-.stat-label { font-size: 0.85rem; opacity: 0.7; margin-top: 5px; 
+.stat-label { font-size: 0.85rem; opacity: 0.7; margin-top: 5px; }
 
+/* ==========================================================================
+   5. KARTICE PROIZVODA - POPRAVLJENO I SIGURNO PRIKAZIVANJE
+   ========================================================================== */
 .section-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 25px; }
 .filter-group { display: flex; gap: 10px; flex-wrap: wrap; }
 .f-btn {
@@ -281,6 +295,9 @@ body.light-mode .hero-content p {
 .card-description { font-size: 0.85rem; opacity: 0.75; margin-bottom: 15px; height: 40px; overflow: hidden; }
 .card-action-link { display: inline-block; color: var(--neon-pink); text-decoration: none; font-size: 0.85rem; font-weight: 700; }
 
+/* ==========================================================================
+   6. KATALOG I TABELA ARANŽMANA
+   ========================================================================== */
 .internal-page { max-width: 1000px; }
 .page-header-glow { text-align: center; margin-bottom: 40px; }
 .page-header-glow h1 { font-size: 2.5rem; font-weight: 800; }
@@ -330,6 +347,9 @@ body.light-mode .glass-table td { color: #333333 !important; }
 .cijene-obracun h3 { font-size: 1.4rem; margin-top: 10px; font-weight: 800; }
 .pulse-button { background: var(--neon-green); color: #000000; border: none; font-weight: 800; padding: 12px 24px; border-radius: 10px; cursor: pointer; }
 
+/* ==========================================================================
+   7. GALERIJA SLIKA
+   ========================================================================== */
 .gallery-section { margin-top: 50px !important; }
 .sub-glow-title { font-size: 1.3rem !important; text-transform: uppercase; letter-spacing: 1.5px !important; margin-bottom: 25px !important; color: #ffffff !important; text-shadow: 0 0 10px rgba(255, 45, 117, 0.3) !important; }
 body.light-mode .sub-glow-title { color: #1a1a1a !important; }
@@ -338,6 +358,9 @@ body.light-mode .sub-glow-title { color: #1a1a1a !important; }
 .gallery-grid img { width: 100% !important; height: 250px !important; object-fit: cover !important; border-radius: 15px !important; border: 1px solid var(--border-color) !important; display: block !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important; }
 .gallery-grid img:hover { transform: scale(1.03) !important; box-shadow: 0 8px 25px rgba(255, 45, 117, 0.25) !important; }
 
+/* ==========================================================================
+   8. KONTAKT FORMA - ODLIČAN DIZAJN
+   ========================================================================== */
 .form-glass-container {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -372,6 +395,9 @@ body.light-mode .input-container input, body.light-mode .input-container select,
 .send-btn:hover { box-shadow: 0 0 20px rgba(255, 45, 117, 0.4); }
 .clear-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-main); padding: 14px 20px; border-radius: 12px; cursor: pointer; flex: 1; transition: all 0.2s ease; }
 
+/* ==========================================================================
+   9. INTERAKTIVNA MAPA I FOOTER
+   ========================================================================== */
 .media-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 25px; overflow: hidden; margin-top: 40px; }
 .media-grid { display: grid; grid-template-columns: 1fr 1.2fr; }
 @media (max-width: 800px) { .media-grid { grid-template-columns: 1fr; } }
@@ -384,7 +410,9 @@ body.light-mode .input-container input, body.light-mode .input-container select,
 .copyright { opacity: 0.6; margin-bottom: 15px; }
 .footer-socials a { color: var(--text-main); text-decoration: none; margin: 0 10px; font-weight: 700; }
 .footer-socials a:hover { color: var(--neon-pink); }
-
+/* ==========================================================================
+   10. CSS ANIMACIJE (@keyframes) (Zahtjev 4.2)
+   ========================================================================== */
 @keyframes neonPulsiranje {
     0% {
         box-shadow: 0 0 5px var(--neon-pink);
@@ -403,6 +431,9 @@ body.light-mode .input-container input, body.light-mode .input-container select,
 /* Primjena animacije na dugmad za slanje i plaćanje */
 .pulse-button, .send-btn {
     animation: neonPulsiranje 2.5s infinite ease-in-out;}
+    /* ==========================================================================
+   DODATAK ZA KATALOG (ČIŠĆENJE INLINE STILOVA)
+   ========================================================================== */
 
 /* Bookmark linkovi na vrhu */
 .bookmark-container {
@@ -519,6 +550,9 @@ body.light-mode .input-container input, body.light-mode .input-container select,
 .top-link:hover {
     text-decoration: underline;
 }
+/* ==========================================================================
+   DODATAK ZA POČETNU STRANICU (ČIŠĆENJE INLINE STILOVA)
+   ========================================================================== */
 
 /* Bočni meni (Sidebar) */
 .sticky-sidebar-wrapper {
@@ -578,6 +612,9 @@ body.light-mode .input-container input, body.light-mode .input-container select,
     border: 0;
     min-height: 250px;
 }
+/* ==========================================================================
+   DODATAK ZA KONTAKT STRANICU (ČIŠĆENJE INLINE STILOVA)
+   ========================================================================== */
 
 .full-width-container {
     width: 100% !important;
